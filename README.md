@@ -52,15 +52,13 @@ dependencies {
 
 ---
 默认样式：
+
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/01.png)
 
 以下为设置了属性样式：
-![]( https://github.com/shengqf/BottomPW/raw/master/img/02.png)
 
-![]( https://github.com/shengqf/BottomPW/raw/master/img/03.png)
+![]( https://github.com/shengqf/BottomPW/raw/master/img/02.png)  ![]( https://github.com/shengqf/BottomPW/raw/master/img/03.png)
 
-![]( https://github.com/shengqf/BottomPW/raw/master/img/04.png)
-
-![]( https://github.com/shengqf/BottomPW/raw/master/img/05.png)
+![]( https://github.com/shengqf/BottomPW/raw/master/img/04.png)  ![]( https://github.com/shengqf/BottomPW/raw/master/img/05.png)
 
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/06.png)
