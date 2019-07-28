@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--PopupWindow弹出时页面背景色-->
+    <color name="overlay">#60000000</color>
+    <!--深黑，用于标题，正文-->
+    <color name="text_primary">#333</color>
+    <!--用于tab文字，二级文字-->
+    <color name="text_secondary">#666</color>
+    <!--用于说明文字，提示文案-->
+    <color name="text_tips">#999</color>
+</resources>

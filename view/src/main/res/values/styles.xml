@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- popupWindow动画（屏幕底部弹出pw动画） -->
+    <style name="PopupWindowAnimationBottomToTop">
+        <item name="android:windowEnterAnimation">@anim/base_pw_bottom_show</item>
+        <item name="android:windowExitAnimation">@anim/base_pw_bottom_hide</item>
+    </style>
+
+</resources>

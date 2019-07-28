@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+    <com.shengqf.view.round.RoundLinearLayout
+            android:id="@+id/round_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:rv_backgroundColor="#FFFFFF"
+            app:rv_cornerRadius="10dp">
+
+        <ViewStub
+                android:id="@+id/view_stub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/layout_title"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </com.shengqf.view.round.RoundLinearLayout>
+
+    <com.shengqf.view.round.RoundTextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            app:rv_backgroundColor="#FFFFFF"
+            app:rv_cornerRadius="10dp"/>
+
+</LinearLayout>
