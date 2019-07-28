@@ -26,7 +26,7 @@ dependencies {
 3、同步工程即可使用
 
 4、使用：
-```ruby
+```kotlin
     BottomPW(this)
         .setList(mList)//设置列表数据源
         .setPwPadding(10)//BottomPW的内边距，单位dp（默认是10dp）
@@ -56,7 +56,11 @@ dependencies {
 
 以下为设置了属性样式：
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/02.png)
+
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/03.png)
+
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/04.png)
+
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/05.png)
+
 ![]( https://github.com/shengqf/BottomPW/raw/master/img/06.png)
