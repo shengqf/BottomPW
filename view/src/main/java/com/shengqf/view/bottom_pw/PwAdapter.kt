@@ -28,11 +28,11 @@ class PwAdapter constructor(context: Context) : RecyclerView.Adapter<PwAdapter.P
         return this
     }
 
-    private var mItemHeight: Int = dp2px(49f) //列表Item的行高
-    private var mItemTextColor: Int = ContextCompat.getColor(mContext,R.color.text_primary) //列表Item的字体颜色
+    private var mItemHeight: Float = 49f //列表Item的行高
+    private var mItemTextColor: Int = R.color.text_primary //列表Item的字体颜色
     private var mItemTextSize: Int = 16 //列表Item的字体大小
 
-    fun setItemHeight(itemHeight: Int): PwAdapter {
+    fun setItemHeight(itemHeight: Float): PwAdapter {
         this.mItemHeight = itemHeight
         return this
     }
@@ -65,9 +65,9 @@ class PwAdapter constructor(context: Context) : RecyclerView.Adapter<PwAdapter.P
     override fun onBindViewHolder(holder: PwViewHolder, position: Int) {
         with(holder.itemView) {
             item_tv.text = mList[position]
-            item_tv.setTextColor(mItemTextColor)
+            item_tv.setTextColor(ContextCompat.getColor(mContext,mItemTextColor))
             item_tv.textSize = mItemTextSize.toFloat()
-            item_tv.layoutParams.height = mItemHeight
+            item_tv.layoutParams.height = dp2px(mItemHeight)
             divider.visibility = if (position == mList.size - 1) View.GONE else View.VISIBLE
             item_tv.setOnClickListener {
                 mOnItemClickListener?.onItemClick(position)

@@ -40,21 +40,21 @@ class BottomPW(activity: Activity) {
     private var mOnPwItemClickListener: OnPwItemClickListener? = null
     private var mOnPwDismissListener: OnPwDismissListener? = null
 
-    private var mPwPadding: Int = dp2px(10f)//Pw默认padding10dp
-    private var mCornerRadius: Int = dp2px(10f)//圆角默认大小10dp
-    private  var mShowTitleTv = false //是否显示标题
-    private var mTitleStr: String = "请选择" //标题字体内容
-    private var mTitleHeight: Int = dp2px(49f) //title的行高
-    private var mTitleColor: Int = ContextCompat.getColor(mActivity, R.color.text_tips) //title字体颜色
-    private var mTitleSize: Int = 16 //title字体大小
-    private var mItemHeight: Int = dp2px(49f) //列表Item的行高
-    private var mItemTextColor: Int = ContextCompat.getColor(mActivity, R.color.text_primary) //列表Item的字体颜色
-    private var mItemTextSize: Int = 16 //列表Item的字体大小
-    private var mShowCancelTv = true //是否显示底部的取消
-    private var mCancelHeight: Int = dp2px(49f) //取消字体的行高
-    private var mCancelTextColor: Int = ContextCompat.getColor(mActivity, R.color.text_tips) //取消字体的颜色
-    private var mCancelTextSize: Int = 16 //取消字体的大小
-    private var mCancelTextStr: String = "取消" //取消字体的内容
+    private var mPwPadding: Float = 10f//Pw默认padding,，默认为10dp
+    private var mCornerRadius: Int = 10//圆角大小，默认为10dp
+    private var mShowTitleTv = false //是否显示标题，默认不显示
+    private var mTitleStr: String = "请选择" //标题字体内容，默认为"请选择"
+    private var mTitleHeight: Float = 49f //title的行高，默认为49dp
+    private var mTitleColor: Int = R.color.text_tips //title字体颜色
+    private var mTitleSize: Int = 16 //title字体大小，默认是16sp
+    private var mItemHeight: Float = 49f //列表Item的行高，默认是49dp
+    private var mItemTextColor: Int = R.color.text_primary //列表Item的字体颜色
+    private var mItemTextSize: Int = 16 //列表Item的字体大小，默认是16sp
+    private var mShowCancelTv = true //是否显示底部的取消，默认显示
+    private var mCancelHeight: Float = 49f //底部取消按钮的行高，默认49dp
+    private var mCancelTextColor: Int = R.color.text_tips //取消字体的颜色
+    private var mCancelTextSize: Int = 16 //取消字体的大小，默认是16sp
+    private var mCancelTextStr: String = "取消" //取消字体的内容，默认为"取消"
 
     //设置列表数据源
     fun setList(list: ArrayList<String>): BottomPW {
@@ -75,7 +75,7 @@ class BottomPW(activity: Activity) {
         return this
     }
 
-    fun setPwPadding(pwPadding: Int): BottomPW {
+    fun setPwPadding(pwPadding: Float): BottomPW {
         this.mPwPadding = pwPadding
         return this
     }
@@ -95,7 +95,7 @@ class BottomPW(activity: Activity) {
         return this
     }
 
-    fun setTitleHeight(titleHeight: Int): BottomPW {
+    fun setTitleHeight(titleHeight: Float): BottomPW {
         this.mTitleHeight = titleHeight
         return this
     }
@@ -110,7 +110,7 @@ class BottomPW(activity: Activity) {
         return this
     }
 
-    fun setItemHeight(itemHeight: Int): BottomPW {
+    fun setItemHeight(itemHeight: Float): BottomPW {
         this.mItemHeight = itemHeight
         return this
     }
@@ -130,7 +130,7 @@ class BottomPW(activity: Activity) {
         return this
     }
 
-    fun setCancelHeight(cancelHeight: Int): BottomPW {
+    fun setCancelHeight(cancelHeight: Float): BottomPW {
         this.mCancelHeight = cancelHeight
         return this
     }
@@ -169,7 +169,7 @@ class BottomPW(activity: Activity) {
     private fun initView() {
         mContentView = LayoutInflater.from(mActivity).inflate(R.layout.layout_pw_bottom, null)
         //pw内边距
-        mContentView.setPadding(mPwPadding, mPwPadding, mPwPadding, mPwPadding)
+        mContentView.setPadding(dp2px(mPwPadding), dp2px(mPwPadding), dp2px(mPwPadding), dp2px(mPwPadding))
 
         with(mContentView) {
             //设置圆角
@@ -180,9 +180,9 @@ class BottomPW(activity: Activity) {
             if (mShowTitleTv) {
                 view_stub.inflate()
                 title_tv.text = mTitleStr
-                title_tv.layoutParams.height = mTitleHeight
+                title_tv.layoutParams.height = dp2px(mTitleHeight)
                 title_tv.textSize = mTitleSize.toFloat()
-                title_tv.setTextColor(mTitleColor)
+                title_tv.setTextColor(ContextCompat.getColor(mActivity,mTitleColor))
             }
 
             //列表
@@ -192,9 +192,9 @@ class BottomPW(activity: Activity) {
 
             //取消按钮
             cancel_tv.visibility = if (mShowCancelTv) View.VISIBLE else View.GONE
-            cancel_tv.setTextColor(mCancelTextColor)
+            cancel_tv.setTextColor(ContextCompat.getColor(mActivity,mCancelTextColor))
             cancel_tv.textSize = mCancelTextSize.toFloat()
-            cancel_tv.layoutParams.height = mCancelHeight
+            cancel_tv.layoutParams.height = dp2px(mCancelHeight)
             cancel_tv.text = mCancelTextStr
             cancel_tv.setOnClickListener {
                 mPopupWindow.dismiss()
