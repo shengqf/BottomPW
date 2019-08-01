@@ -2,9 +2,7 @@
 
 ---
 
-### 使用：
-
-###### 1、项目根目录build.gradle文件添加maven地址：
+##### 1、项目根目录build.gradle文件添加maven地址：
 ```ruby
 allprojects {
     repositories {
@@ -15,7 +13,7 @@ allprojects {
 }
 ```
 
-###### 2、需要使用的BottomPW的模块的build.gradle文件添加：
+##### 2、需要使用的BottomPW的模块的build.gradle文件添加：
 ```ruby
 dependencies {
     implementation 'com.github.shengqf:BottomPW:v1.0.0'
@@ -23,7 +21,7 @@ dependencies {
 
 ```
 
-###### 3、使用：
+##### 3、使用：
 
 （1）关于BottomPW所有属性的设置方法如下：
 
