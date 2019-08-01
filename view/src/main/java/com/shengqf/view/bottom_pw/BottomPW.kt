@@ -173,8 +173,8 @@ class BottomPW(activity: Activity) {
 
         with(mContentView) {
             //设置圆角
-            round_layout.delegate.cornerRadius = dp2px(mCornerRadius.toFloat())
-            cancel_tv.delegate.cornerRadius = dp2px(mCornerRadius.toFloat())
+            round_layout.delegate.cornerRadius = mCornerRadius
+            cancel_tv.delegate.cornerRadius = mCornerRadius
 
             //标题
             if (mShowTitleTv) {
