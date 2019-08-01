@@ -16,7 +16,7 @@ allprojects {
 ##### 2、需要使用的BottomPW的模块的build.gradle文件添加：
 ```ruby
 dependencies {
-    implementation 'com.github.shengqf:BottomPW:v1.0.0'
+    implementation 'com.github.shengqf:BottomPW:v1.0.1'
 }
 
 ```
